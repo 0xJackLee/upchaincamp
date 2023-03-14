@@ -39,7 +39,6 @@ async function main() {
   
   console.log('count:', count)
   console.log('new count:', newCount)
-
   console.log(`Please verify: npx hardhat verify ${counter.address}`);
 }
 
