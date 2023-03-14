@@ -6,12 +6,14 @@ import "hardhat/console.sol";
 contract Counter {
 
     uint256 public counter;
-
+    address private _owner;
     constructor (uint256 x) {
         counter = x;
+        _owner = msg.sender;
     }
 
     function count() public {
+        require(msg.sender == _owner, "only contract owner can count");
         counter += 1;
     }
 
