@@ -3,4 +3,17 @@ src = 'src'
 out = 'out'
 libs = ['lib']
 
+solc = "0.8.4" 
+
+# 配置rpc $变量从.env中读取
+[rpc_endpoints]
+goerli = "${GOERLI_RPC_URL}"
+local = "http://127.0.0.1:8545"
+
+# forge script 支持在部署时进行代码验证
+# 配置 etherscan的 API KEY
+[etherscan]
+goerli = { key = "${ETHERSCAN_API_KEY}" }
+
+
 # See more config options https://github.com/foundry-rs/foundry/tree/master/config

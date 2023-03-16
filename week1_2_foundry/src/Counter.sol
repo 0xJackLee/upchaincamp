@@ -1,14 +1,19 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.4;
 
 contract Counter {
-    uint256 public number;
+    uint256 public counter;
 
-    function setNumber(uint256 newNumber) public {
-        number = newNumber;
+    constructor(uint256 x) {
+        counter = x;
     }
 
-    function increment() public {
-        number++;
+    function add(uint256 x) public {
+        require(x < 1e18, "x is too big");
+        counter += x;
+    }
+
+    function count() public {
+        counter += 1;
     }
 }
