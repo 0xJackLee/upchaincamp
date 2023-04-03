@@ -21,15 +21,15 @@ module.exports = {
       url: "http://127.0.0.1:8545",
       chainId: 31337
     },
-    // Sepolia测试网
+    // goerli测试网
     sepolia: {
-      url: "https://eth-sepolia.public.blastapi.io",
+      url: "https://eth-sepolia.g.alchemy.com/v2/demo",
       accounts: [PRIVATE_KEY1],
-      chainId: 11155111,
+      chainId: 11155111
     }
   },
   etherscan: {
     apiKey: scankey
   }
 
-};
+}
