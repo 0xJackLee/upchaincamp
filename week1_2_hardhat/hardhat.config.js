@@ -19,6 +19,7 @@ module.exports = {
       url: "http://127.0.0.1:8545",
       chainId: 31337
     },
+    // goerli测试网
     goerli: {
       url: "https://eth-goerli.api.onfinality.io/public",
       accounts: [PRIVATE_KEY1],
