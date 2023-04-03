@@ -4,7 +4,9 @@ require("@nomicfoundation/hardhat-toolbox");
 // const scankey = process.env.ETHERSCAN_API_KEY
 let dotenv = require('dotenv')
 
-dotenv.config({ path: "./.env" })
+dotenv.config({
+  path: "./.env"
+})
 const PRIVATE_KEY1 = process.env.PRIVATEKEY;
 const scankey = process.env.ETHERSCAN_API_KEY;
 // console.log(PRIVATE_KEY1)
@@ -19,11 +21,11 @@ module.exports = {
       url: "http://127.0.0.1:8545",
       chainId: 31337
     },
-    // goerli测试网
-    goerli: {
-      url: "https://eth-goerli.api.onfinality.io/public",
+    // Sepolia测试网
+    sepolia: {
+      url: "https://eth-sepolia.public.blastapi.io",
       accounts: [PRIVATE_KEY1],
-      chainId: 5,
+      chainId: 11155111,
     }
   },
   etherscan: {
