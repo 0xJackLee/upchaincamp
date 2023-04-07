@@ -2,22 +2,24 @@
 
 pragma solidity ^0.8.4;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+// import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol";
+import "@openzeppelin/contracts-upgradeable/token/ERC20/ERC20Upgradeable.sol";
 
 interface TokenRecipient {
     function tokenReceived(address sender, uint amount) external returns (bool);
 }
 
-contract ERC20v2 is ERC20 {
+contract ERC20v2 is ERC20Upgradeable {
     using AddressUpgradeable for address;
 
-    constructor(string memory name, string memory symbol) ERC20(name, symbol) {}
+    // 逻辑合约中的构造函数无效
+    // constructor(string memory name, string memory symbol) ERC20(name, symbol) {}
 
     function balanceOfv2(
         address account
     ) public view returns (uint256, string memory) {
-        return (ERC20.balanceOf(account), "erc20v2");
+        return (ERC20Upgradeable.balanceOf(account), "erc20v2");
     }
 
     function mint(address account) public {
@@ -32,7 +34,7 @@ contract ERC20v2 is ERC20 {
         _transfer(msg.sender, recipient, amount);
 
         if (recipient.isContract()) {
-            // 执行目标合约回调
+            // 执行目标合约tokenReceived回调
             bool rv = TokenRecipient(recipient).tokenReceived(
                 msg.sender,
                 amount
