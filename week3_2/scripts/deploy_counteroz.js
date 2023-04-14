@@ -30,7 +30,8 @@ async function main() {
     // 获取逻辑合约地址 由于实现合约的地址是动态计算的，因此您无法直接获取实现合约的地址。
     let currentImplAddress = await getImplementationAddress(ethers.provider, upgraded.address);
     // let currentImplAddress = await getImplementationAddress(ethers.provider, instance.address);
-    console.log('implAddress', upgraded.address)
+    console.log('implAddress', currentImplAddress)
+    console.log('proxyAddress', upgraded.address)
     console.log(`Please verify AppController: npx hardhat verify ${currentImplAddress} `);
 }
 

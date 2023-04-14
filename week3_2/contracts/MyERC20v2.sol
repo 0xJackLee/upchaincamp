@@ -10,7 +10,7 @@ interface TokenRecipient {
     function tokenReceived(address sender, uint amount) external returns (bool);
 }
 
-contract ERC20v2 is ERC20Upgradeable {
+contract MyERC20v2 is ERC20Upgradeable {
     using AddressUpgradeable for address;
 
     // 逻辑合约中的构造函数无效
@@ -26,7 +26,7 @@ contract ERC20v2 is ERC20Upgradeable {
         _mint(account, 200);
     }
 
-    // 带回调的转账
+    // 带回调的transfer转账
     function trnasferWithCallback(
         address recipient,
         uint256 amount
