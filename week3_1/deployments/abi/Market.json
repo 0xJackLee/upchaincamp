@@ -1,0 +1,11 @@
+[
+  "constructor(address)",
+  "event List(address indexed,address indexed,uint256 indexed,uint256)",
+  "event Purchase(address indexed,address indexed,uint256)",
+  "event Revoke(address indexed,address indexed,uint256)",
+  "function erc20Addr() view returns (address)",
+  "function list(uint256,address,uint256)",
+  "function onERC721Received(address,address,uint256,bytes) returns (bytes4)",
+  "function purchase(address,uint256)",
+  "function revoke(address,uint256)"
+]

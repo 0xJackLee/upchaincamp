@@ -13,6 +13,7 @@
     "@openzeppelin/contracts": "^4.8.2",
     "dotenv": "^16.0.3",
     "hardhat": "^2.13.0",
+    "hardhat-abi-exporter": "^2.10.1",
     "install": "^0.13.0",
     "npm": "^9.6.2"
   }

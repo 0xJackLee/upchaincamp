@@ -3,6 +3,7 @@ require("@nomicfoundation/hardhat-toolbox");
 // const mnemonic = process.env.MNEMONIC
 // const scankey = process.env.ETHERSCAN_API_KEY
 let dotenv = require('dotenv')
+require('hardhat-abi-exporter');
 
 dotenv.config({
   path: "./.env"
@@ -30,6 +31,13 @@ module.exports = {
   },
   etherscan: {
     apiKey: scankey
+  },
+  abiExporter: {
+    path: "./deployments/abi",
+    clear: true,
+    flat: true,
+    spacing: 2,
+    pretty: true,
   }
 
 }
