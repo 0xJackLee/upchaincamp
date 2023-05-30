@@ -1,9 +1,12 @@
 [
-    "constructor(address)",
-    "function balances(address) view returns (uint256)",
-    "function deposit(uint256)",
-    "function depositWithSignature(address,uint256,bytes)",
-    "function getMsgHash(address,uint256) view returns (bytes32)",
-    "function withdraw(uint256)"
-  ]
-  
+  "constructor(address)",
+  "function balances(address) view returns (uint256)",
+  "function deposit(uint256)",
+  "function deposit2(address,uint256)",
+  "function deposit3(address,uint256)",
+  "function depositWithSignature(address,uint256,bytes)",
+  "function getMsgHash(address,uint256) view returns (bytes32)",
+  "function permitDeposit(address,uint256,uint256,uint8,bytes32,bytes32)",
+  "function permitDeposit2(address,uint256,uint256,uint8,bytes32,bytes32)",
+  "function withdraw(uint256)"
+]

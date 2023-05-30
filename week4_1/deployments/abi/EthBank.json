@@ -1,0 +1,10 @@
+[
+    "constructor()",
+    "error CallFailed()",
+    "function amount() view returns (uint256)",
+    "function deposit() payable",
+    "function getBalance() view returns (uint256)",
+    "function rug()",
+    "function withdraw(uint256)"
+  ]
+  
